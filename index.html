@@ -705,7 +705,7 @@ p { color: var(--text-2); }
       <div class="hero__copy">
         <div class="hero__meta">
           <span class="hero__meta-dot" aria-hidden="true"></span>
-          <span class="hero__meta-text">SMART PIPING DISTRIBUTION · BAEMI · EST. 2026</span>
+          <span class="hero__meta-text">SMART PIPING DISTRIBUTION · BAEMI</span>
         </div>
         <h1>
           배관 자재 유통의<br />
@@ -808,8 +808,8 @@ p { color: var(--text-2); }
         </div>
         <div class="stat">
           <div class="stat__label">ROADMAP</div>
-          <div class="stat__num">2026<span class="unit">Q4</span></div>
-          <div class="stat__desc">벤처 인증 · TIPS 지원 계획</div>
+          <div class="stat__num">H2<span class="unit">/ 하반기</span></div>
+          <div class="stat__desc">벤처 인증 · TIPS 지원 예정</div>
         </div>
       </div>
     </div>
@@ -1039,7 +1039,7 @@ p { color: var(--text-2); }
         </div>
       </aside>
 
-      <form action="https://formspree.io/f/xqerpowr" method="POST">
+      <form class="form reveal" id="contactForm" novalidate>
         <div class="form__row">
           <div class="field">
             <label for="company">회사명 <span class="req" aria-hidden="true">*</span></label>
@@ -1098,7 +1098,7 @@ p { color: var(--text-2); }
       <div class="footer__meta">
         <div>부산 강서구 유통단지1로 41, 티플렉스 124동 107호</div>
         <div>TEL 051-996-8585 · <a href="mailto:info@baemi.co.kr">INFO@BAEMI.CO.KR</a></div>
-        <div>© 2026 BAEMI CORP · ALL RIGHTS RESERVED</div>
+        <div>© <span id="footerYear">2026</span> BAEMI CORP · ALL RIGHTS RESERVED</div>
       </div>
     </div>
   </div>
@@ -1109,6 +1109,11 @@ p { color: var(--text-2); }
 (function () {
   const nav = document.getElementById('nav');
   const toggle = document.getElementById('navToggle');
+
+  /* 푸터 저작권 연도 자동 갱신 (매년 새해에 자동으로 바뀜) */
+  const yr = document.getElementById('footerYear');
+  if (yr) yr.textContent = new Date().getFullYear();
+
   const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 8);
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
