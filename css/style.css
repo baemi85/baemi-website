@@ -478,7 +478,7 @@ a.reach__item:hover{background:rgba(255,255,255,.1);border-color:var(--green);tr
 
 /* 카카오톡 채널 */
 .kakao{
-  display:grid;grid-template-columns:auto 1fr auto;align-items:center;
+  display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;
   gap:clamp(14px,2vw,20px);
   margin-bottom:clamp(40px,5vw,60px);
   background:rgba(254,229,0,.08);
@@ -507,6 +507,10 @@ a.reach__item:hover{background:rgba(255,255,255,.1);border-color:var(--green);tr
 }
 .kakao__note{font-size:14px;color:rgba(255,255,255,.62);margin-top:3px}
 .kakao__go{font-size:20px;color:#FEE500;flex:none}
+/* 카톡 QR (PC 전용 — 모바일은 카드 터치로 바로 연결) */
+.kakao__qr{display:flex;flex-direction:column;align-items:center;gap:5px;flex:none}
+.kakao__qrimg{display:block;width:96px;height:96px;border-radius:8px;background:#fff}
+.kakao__qrcap{font-size:11px;font-weight:600;color:rgba(255,255,255,.6);letter-spacing:-.01em}
 
 .footer__grid{
   display:grid;grid-template-columns:1.2fr 1fr 1.1fr;gap:clamp(28px,4vw,48px);
@@ -650,6 +654,8 @@ a.reach__item:hover{background:rgba(255,255,255,.1);border-color:var(--green);tr
   .kakao__ico{width:48px;height:48px;border-radius:15px}
   .kakao__ico svg{width:27px;height:27px}
   .kakao__go{display:none}
+  .kakao__qr{display:none}
+  .kakao{grid-template-columns:auto 1fr}
 
   .stats{grid-template-columns:repeat(2,auto);justify-content:start;column-gap:clamp(24px,10vw,56px);row-gap:20px}
   .to-top{right:14px;bottom:14px;width:44px;height:44px}
